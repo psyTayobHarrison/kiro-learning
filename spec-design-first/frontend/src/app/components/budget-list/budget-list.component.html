@@ -1,0 +1,44 @@
+@if (budgetStatuses.length === 0) {
+  <p class="empty-state">No budgets set.</p>
+} @else {
+  <table class="budget-table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Month</th>
+        <th>Limit</th>
+        <th>Actual</th>
+        <th>Remaining</th>
+        <th>Progress</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (status of budgetStatuses; track status.id) {
+        <tr>
+          <td>{{ status.category }}</td>
+          <td>{{ status.month }}</td>
+          <td>{{ status.limitAmount | number:'1.2-2' }}</td>
+          <td>{{ status.actual | number:'1.2-2' }}</td>
+          <td [class.remaining-over]="isOverBudget(status)">
+            {{ status.remaining | number:'1.2-2' }}
+          </td>
+          <td>
+            <div class="progress-container">
+              <div
+                class="progress-bar"
+                [class.on-track]="!isOverBudget(status)"
+                [class.over-budget]="isOverBudget(status)"
+                [style.width.%]="getProgressWidth(status)">
+              </div>
+            </div>
+          </td>
+          <td class="actions">
+            <button class="btn-edit" (click)="onEdit(status)">Edit</button>
+            <button class="btn-delete" (click)="onDelete(status.id)">Delete</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}

@@ -1,0 +1,56 @@
+<form [formGroup]="budgetForm" (ngSubmit)="onSubmit()" class="budget-form" aria-label="Budget form">
+  <h3>{{ isEditMode ? 'Edit Budget' : 'Set Budget' }}</h3>
+
+  @if (errorMessage) {
+    <div class="error-message" role="alert">{{ errorMessage }}</div>
+  }
+
+  <div class="form-field">
+    <label for="category">Category *</label>
+    <input
+      id="category"
+      type="text"
+      formControlName="category"
+      placeholder="e.g. food, transport"
+      [attr.aria-invalid]="budgetForm.get('category')?.invalid && budgetForm.get('category')?.touched"
+    />
+    @if (budgetForm.get('category')?.invalid && budgetForm.get('category')?.touched) {
+      <span class="validation-error">Category is required.</span>
+    }
+  </div>
+
+  <div class="form-field">
+    <label for="month">Month *</label>
+    <input
+      id="month"
+      type="month"
+      formControlName="month"
+      [attr.aria-invalid]="budgetForm.get('month')?.invalid && budgetForm.get('month')?.touched"
+    />
+    @if (budgetForm.get('month')?.invalid && budgetForm.get('month')?.touched) {
+      <span class="validation-error">Month is required.</span>
+    }
+  </div>
+
+  <div class="form-field">
+    <label for="limitAmount">Limit Amount *</label>
+    <input
+      id="limitAmount"
+      type="number"
+      formControlName="limitAmount"
+      step="0.01"
+      placeholder="0.00"
+      [attr.aria-invalid]="budgetForm.get('limitAmount')?.invalid && budgetForm.get('limitAmount')?.touched"
+    />
+    @if (budgetForm.get('limitAmount')?.invalid && budgetForm.get('limitAmount')?.touched) {
+      <span class="validation-error">Limit amount is required and must be greater than 0.</span>
+    }
+  </div>
+
+  <div class="form-actions">
+    <button type="submit">{{ isEditMode ? 'Update' : 'Set' }} Budget</button>
+    @if (isEditMode) {
+      <button type="button" (click)="cancelEdit()" class="cancel-btn">Cancel</button>
+    }
+  </div>
+</form>

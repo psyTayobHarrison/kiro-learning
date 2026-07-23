@@ -5,15 +5,17 @@ import { ExpenseFormComponent } from './components/expense-form/expense-form.com
 import { ExpenseListComponent } from './components/expense-list/expense-list.component';
 import { CategoryFilterComponent } from './components/category-filter/category-filter.component';
 import { SummaryViewComponent } from './components/summary-view/summary-view.component';
+import { BudgetsTabComponent } from './components/budgets-tab/budgets-tab.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ExpenseFormComponent, ExpenseListComponent, CategoryFilterComponent, SummaryViewComponent],
+  imports: [ExpenseFormComponent, ExpenseListComponent, CategoryFilterComponent, SummaryViewComponent, BudgetsTabComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App implements OnInit {
+  activeTab: 'expenses' | 'budgets' = 'expenses';
   expenses: Expense[] = [];
   summary: CategorySummary[] = [];
   filterCategory = '';
