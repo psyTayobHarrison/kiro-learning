@@ -1,0 +1,61 @@
+<div class="card">
+  <h2>Expenses</h2>
+
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="expenses.length === 0" class="empty-state">
+    No expenses have been recorded yet.
+  </div>
+
+  <table *ngIf="expenses.length > 0">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Category</th>
+        <th>Amount</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let expense of expenses">
+        <!-- Display mode -->
+        <ng-container *ngIf="editingExpenseId !== expense.id">
+          <td>{{ expense.date }}</td>
+          <td>{{ expense.category }}</td>
+          <td>{{ expense.amount | number:'1.2-2' }}</td>
+          <td>{{ expense.description }}</td>
+          <td class="actions">
+            <button class="btn btn-secondary btn-sm" (click)="startEdit(expense)">Edit</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteExpense(expense.id)">Delete</button>
+          </td>
+        </ng-container>
+
+        <!-- Edit mode -->
+        <ng-container *ngIf="editingExpenseId === expense.id">
+          <td>
+            <input type="date" [formControl]="$any(editForm.get('date'))"
+              [class.invalid]="isFieldInvalid('date')" />
+          </td>
+          <td>
+            <input type="text" [formControl]="$any(editForm.get('category'))"
+              [class.invalid]="isFieldInvalid('category')" />
+          </td>
+          <td>
+            <input type="number" step="0.01" [formControl]="$any(editForm.get('amount'))"
+              [class.invalid]="isFieldInvalid('amount')" />
+          </td>
+          <td>
+            <input type="text" [formControl]="$any(editForm.get('description'))" />
+          </td>
+          <td class="actions">
+            <button class="btn btn-primary btn-sm" (click)="saveEdit(expense.id)">Save</button>
+            <button class="btn btn-secondary btn-sm" (click)="cancelEdit()">Cancel</button>
+          </td>
+        </ng-container>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,387 @@
+{
+  "pbtResults": {
+    "4.3 Write property test: Create-then-retrieve round trip": {
+      "status": "passed",
+      "lastRunTimestamp": 1784812441430
+    }
+  },
+  "executionHistory": {
+    "1.1 Initialize Spring Boot project with dependencies and configuration": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801514876
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801525123
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801746909
+      }
+    ],
+    "1.2 Create Expense JPA entity and database schema": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801515113
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801751596
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801834421
+      }
+    ],
+    "1.3 Create ExpenseRepository with custom queries": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801515305
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801844189
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801888412
+      }
+    ],
+    "1.4 Create request/response DTOs": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801515393
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801752347
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801835047
+      }
+    ],
+    "2.1 Implement ExpenseService with CRUD and summary logic": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801515448
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801894131
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801979412
+      }
+    ],
+    "2.2 Implement ExpenseController REST endpoints": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801515503
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801984216
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784802049189
+      }
+    ],
+    "2.3 Implement GlobalExceptionHandler": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801515558
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801985150
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784802049954
+      }
+    ],
+    "3. Checkpoint - Backend compilation and basic verification": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801515604
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784802651955
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784802718423
+      }
+    ],
+    "4.1 Write unit tests for ExpenseService": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801515654
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784802060388
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784802630870
+      }
+    ],
+    "4.2 Write unit tests for ExpenseController using @WebMvcTest": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801515705
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784802061120
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784802631803
+      }
+    ],
+    "5. Checkpoint - Backend tests green": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801515756
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784802723044
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784802727334
+      }
+    ],
+    "6.1 Initialize Angular project and configure proxy": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801515807
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784802742217
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784803528940
+      }
+    ],
+    "6.2 Create TypeScript models and ExpenseService": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801515880
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784803533597
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784803587388
+      }
+    ],
+    "7.1 Implement ExpenseFormComponent": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801515930
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784803594066
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784803707794
+      }
+    ],
+    "7.2 Implement ExpenseListComponent": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801515984
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784803594859
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784803708453
+      }
+    ],
+    "7.3 Implement CategoryFilterComponent": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801516035
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784803595616
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784803709160
+      }
+    ],
+    "7.4 Implement SpendingSummaryComponent": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801516085
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784803596310
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784803709860
+      }
+    ],
+    "8.1 Compose AppComponent layout and component communication": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801516139
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784803716139
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784803800194
+      }
+    ],
+    "9. Final checkpoint - Full stack verification": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801516191
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784803806857
+      },
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784803876584
+      }
+    ],
+    "1. Set up backend project structure and data layer": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784801888476
+      }
+    ],
+    "2. Implement backend business logic and API endpoints": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784802050018
+      }
+    ],
+    "4. Backend testing": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784802631874
+      }
+    ],
+    "6. Set up frontend project and shared infrastructure": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784803587437
+      }
+    ],
+    "7. Implement frontend components": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784803709913
+      }
+    ],
+    "8. Wire components together and integrate": [
+      {
+        "executionId": "8fbba7d5-a046-4ebb-b093-4c62d50e61d2",
+        "chatSessionId": "sess_758a955e-cdcf-46cb-8629-a350a2ceeaa5",
+        "timestamp": 1784803800279
+      }
+    ],
+    "4.3 Write property test: Create-then-retrieve round trip": [
+      {
+        "executionId": "6c03e275-6ae0-492e-8a5d-486c836ac692",
+        "chatSessionId": "sess_8026e583-7e31-41f0-aa2b-a5611884105f",
+        "timestamp": 1784812163976
+      },
+      {
+        "executionId": "6c03e275-6ae0-492e-8a5d-486c836ac692",
+        "chatSessionId": "sess_8026e583-7e31-41f0-aa2b-a5611884105f",
+        "timestamp": 1784812461053
+      }
+    ]
+  }
+}

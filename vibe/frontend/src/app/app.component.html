@@ -1,0 +1,26 @@
+<div class="app-container">
+  <header class="app-header">
+    <h1>Budget Tracker</h1>
+  </header>
+
+  <main class="app-main">
+    <app-expense-form
+      [expenseToEdit]="expenseToEdit"
+      (save)="onSaveExpense($event)"
+      (cancelEdit)="onCancelEdit()">
+    </app-expense-form>
+
+    <div class="content-grid">
+      <app-expense-list
+        [expenses]="expenses"
+        (edit)="onEditExpense($event)"
+        (delete)="onDeleteExpense($event)"
+        (filterChange)="onFilterChange($event)">
+      </app-expense-list>
+
+      <app-expense-summary
+        [summary]="summary">
+      </app-expense-summary>
+    </div>
+  </main>
+</div>

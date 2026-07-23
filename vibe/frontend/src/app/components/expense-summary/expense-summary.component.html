@@ -1,0 +1,28 @@
+<div class="expense-summary">
+  <h2>Spending Summary</h2>
+
+  <div *ngIf="summary.length === 0" class="empty-state">
+    <p>No data to summarize yet.</p>
+  </div>
+
+  <table *ngIf="summary.length > 0" class="summary-table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th class="amount-col">Total Spent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of summary">
+        <td><span class="category-badge">{{ item.category }}</span></td>
+        <td class="amount-col">{{ item.total | currency }}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td><strong>Grand Total</strong></td>
+        <td class="amount-col"><strong>{{ grandTotal | currency }}</strong></td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

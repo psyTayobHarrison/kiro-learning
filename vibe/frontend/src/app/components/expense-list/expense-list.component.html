@@ -1,0 +1,42 @@
+<div class="expense-list">
+  <div class="list-header">
+    <h2>Expenses</h2>
+    <div class="filter-group">
+      <label for="filter">Filter by category:</label>
+      <input
+        type="text"
+        id="filter"
+        [(ngModel)]="filterCategory"
+        (ngModelChange)="onFilterChange()"
+        placeholder="Type to filter...">
+    </div>
+  </div>
+
+  <div *ngIf="expenses.length === 0" class="empty-state">
+    <p>No expenses found.</p>
+  </div>
+
+  <table *ngIf="expenses.length > 0" class="expenses-table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th class="amount-col">Amount</th>
+        <th class="actions-col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let expense of expenses">
+        <td>{{ expense.date }}</td>
+        <td><span class="category-badge">{{ expense.category }}</span></td>
+        <td>{{ expense.description || '—' }}</td>
+        <td class="amount-col">{{ expense.amount | currency }}</td>
+        <td class="actions-col">
+          <button class="btn btn-sm btn-edit" (click)="onEdit(expense)">Edit</button>
+          <button class="btn btn-sm btn-delete" (click)="onDelete(expense.id!)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

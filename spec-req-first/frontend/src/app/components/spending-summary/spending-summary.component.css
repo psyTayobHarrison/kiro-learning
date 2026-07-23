@@ -1,0 +1,14 @@
+h2 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-size: 1.3rem;
+}
+
+table {
+  width: 100%;
+}
+
+td:last-child,
+th:last-child {
+  text-align: right;
+}

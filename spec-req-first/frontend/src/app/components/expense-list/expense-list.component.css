@@ -1,0 +1,39 @@
+h2 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.actions {
+  white-space: nowrap;
+}
+
+.actions button {
+  margin-right: 5px;
+}
+
+.actions button:last-child {
+  margin-right: 0;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+td input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+td input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+td input.invalid {
+  border-color: #e74c3c;
+}

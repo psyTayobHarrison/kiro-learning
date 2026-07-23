@@ -1,0 +1,11 @@
+<div class="app-container">
+  <header class="app-header">
+    <h1>{{ title }}</h1>
+  </header>
+  <div class="app-content">
+    <app-expense-form (expenseCreated)="onExpenseCreated()"></app-expense-form>
+    <app-category-filter [categories]="categories" (categorySelected)="onCategorySelected($event)"></app-category-filter>
+    <app-expense-list [expenses]="expenses" (expenseDeleted)="onExpenseDeleted()" (expenseUpdated)="onExpenseUpdated()"></app-expense-list>
+    <app-spending-summary [summaries]="summaries"></app-spending-summary>
+  </div>
+</div>

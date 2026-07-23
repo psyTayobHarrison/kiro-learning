@@ -1,0 +1,24 @@
+<div class="card">
+  <h2>Spending Summary</h2>
+
+  @if (sortedSummaries.length === 0) {
+    <p class="empty-state">No spending data available.</p>
+  } @else {
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Total Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (summary of sortedSummaries; track summary.category) {
+          <tr>
+            <td>{{ summary.category }}</td>
+            <td>{{ summary.totalAmount | number:'1.2-2' }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</div>

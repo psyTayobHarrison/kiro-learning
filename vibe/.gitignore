@@ -1,0 +1,36 @@
+# ----- Java / Maven -----
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+hs_err_pid*
+
+# ----- Angular / Node -----
+node_modules/
+dist/
+.angular/
+.npm
+*.tgz
+
+# ----- IDE -----
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# ----- OS -----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----- Environment / Secrets -----
+.env
+*.env.local
+
+# ----- Misc -----
+*.tmp
+*.bak
+.jqwik-database
