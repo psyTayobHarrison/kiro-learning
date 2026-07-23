@@ -1,0 +1,29 @@
+@if (expenses.length === 0) {
+  <p class="empty-state">No expenses recorded.</p>
+} @else {
+  <table class="expense-table">
+    <thead>
+      <tr>
+        <th>Amount</th>
+        <th>Category</th>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (expense of expenses; track expense.id) {
+        <tr>
+          <td>{{ expense.amount | currency }}</td>
+          <td>{{ expense.category }}</td>
+          <td>{{ expense.date }}</td>
+          <td>{{ expense.description || '—' }}</td>
+          <td class="actions">
+            <button class="btn-edit" (click)="onEdit(expense)">Edit</button>
+            <button class="btn-delete" (click)="onDelete(expense.id)">Delete</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}

@@ -1,0 +1,66 @@
+<form [formGroup]="expenseForm" (ngSubmit)="onSubmit()" class="expense-form" aria-label="Expense form">
+  <h3>{{ isEditMode ? 'Edit Expense' : 'Add Expense' }}</h3>
+
+  @if (errorMessage) {
+    <div class="error-message" role="alert">{{ errorMessage }}</div>
+  }
+
+  <div class="form-field">
+    <label for="amount">Amount *</label>
+    <input
+      id="amount"
+      type="number"
+      formControlName="amount"
+      step="0.01"
+      placeholder="0.00"
+      [attr.aria-invalid]="expenseForm.get('amount')?.invalid && expenseForm.get('amount')?.touched"
+    />
+    @if (expenseForm.get('amount')?.invalid && expenseForm.get('amount')?.touched) {
+      <span class="validation-error">Amount is required and must be greater than 0.</span>
+    }
+  </div>
+
+  <div class="form-field">
+    <label for="category">Category *</label>
+    <input
+      id="category"
+      type="text"
+      formControlName="category"
+      placeholder="e.g. food, transport"
+      [attr.aria-invalid]="expenseForm.get('category')?.invalid && expenseForm.get('category')?.touched"
+    />
+    @if (expenseForm.get('category')?.invalid && expenseForm.get('category')?.touched) {
+      <span class="validation-error">Category is required.</span>
+    }
+  </div>
+
+  <div class="form-field">
+    <label for="date">Date *</label>
+    <input
+      id="date"
+      type="date"
+      formControlName="date"
+      [attr.aria-invalid]="expenseForm.get('date')?.invalid && expenseForm.get('date')?.touched"
+    />
+    @if (expenseForm.get('date')?.invalid && expenseForm.get('date')?.touched) {
+      <span class="validation-error">Date is required.</span>
+    }
+  </div>
+
+  <div class="form-field">
+    <label for="description">Description</label>
+    <input
+      id="description"
+      type="text"
+      formControlName="description"
+      placeholder="Optional description"
+    />
+  </div>
+
+  <div class="form-actions">
+    <button type="submit">{{ isEditMode ? 'Update' : 'Add' }} Expense</button>
+    @if (isEditMode) {
+      <button type="button" (click)="cancelEdit()" class="cancel-btn">Cancel</button>
+    }
+  </div>
+</form>

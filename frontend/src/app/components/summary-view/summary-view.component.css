@@ -1,0 +1,35 @@
+.summary-view {
+  margin-top: 1.5rem;
+}
+
+.summary-view h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.empty-state {
+  color: #666;
+  font-style: italic;
+}
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.summary-table th,
+.summary-table td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.summary-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.summary-table td:last-child,
+.summary-table th:last-child {
+  text-align: right;
+}

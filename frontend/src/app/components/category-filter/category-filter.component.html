@@ -1,0 +1,15 @@
+<div class="category-filter">
+  <label for="category-filter-input">Filter by category:</label>
+  <div class="filter-input-group">
+    <input
+      id="category-filter-input"
+      type="text"
+      placeholder="Enter category..."
+      [(ngModel)]="filterValue"
+      (input)="onFilterInput()"
+    />
+    @if (filterValue) {
+      <button class="btn-clear" (click)="clearFilter()" aria-label="Clear filter">✕</button>
+    }
+  </div>
+</div>

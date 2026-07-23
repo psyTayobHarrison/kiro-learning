@@ -1,0 +1,28 @@
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.filter-section {
+  margin-bottom: 1.5rem;
+}
+
+.expense-list-section {
+  margin-top: 1rem;
+}
+
+.no-matches {
+  color: #666;
+  font-style: italic;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+}

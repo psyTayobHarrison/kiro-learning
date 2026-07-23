@@ -1,0 +1,18 @@
+<main class="app-container">
+  <h1>Budget Tracker</h1>
+
+  <app-expense-form
+    [expenseToEdit]="expenseToEdit"
+    (expenseSaved)="onExpenseSaved()">
+  </app-expense-form>
+
+  <app-category-filter (filterChanged)="onFilterChanged($event)"></app-category-filter>
+
+  <app-expense-list
+    [expenses]="expenses"
+    (editExpense)="onEditExpense($event)"
+    (deleteExpense)="onDeleteExpense($event)">
+  </app-expense-list>
+
+  <app-summary-view [summary]="summary"></app-summary-view>
+</main>
