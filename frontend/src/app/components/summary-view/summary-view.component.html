@@ -1,0 +1,24 @@
+<section class="summary-view">
+  <h2>Spending Summary</h2>
+
+  @if (summary.length === 0) {
+    <p class="empty-state">No expenses recorded.</p>
+  } @else {
+    <table class="summary-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of summary; track item.category) {
+          <tr>
+            <td>{{ item.category }}</td>
+            <td>{{ item.total | number:'1.2-2' }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</section>
