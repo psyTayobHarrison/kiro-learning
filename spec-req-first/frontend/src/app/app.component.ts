@@ -4,6 +4,7 @@ import { ExpenseFormComponent } from './components/expense-form/expense-form.com
 import { ExpenseListComponent } from './components/expense-list/expense-list.component';
 import { CategoryFilterComponent } from './components/category-filter/category-filter.component';
 import { SpendingSummaryComponent } from './components/spending-summary/spending-summary.component';
+import { BudgetsTabComponent } from './components/budgets-tab/budgets-tab.component';
 import { ExpenseService } from './services/expense.service';
 import { Expense, CategorySummary } from './models/expense.model';
 
@@ -15,13 +16,15 @@ import { Expense, CategorySummary } from './models/expense.model';
     ExpenseFormComponent,
     ExpenseListComponent,
     CategoryFilterComponent,
-    SpendingSummaryComponent
+    SpendingSummaryComponent,
+    BudgetsTabComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
   title = 'Budget Tracker';
+  activeTab = 'expenses';
   expenses: Expense[] = [];
   summaries: CategorySummary[] = [];
   categories: string[] = [];

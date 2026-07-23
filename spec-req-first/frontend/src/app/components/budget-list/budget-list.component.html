@@ -1,0 +1,44 @@
+<div class="card">
+  <h2>Budget Status</h2>
+
+  <p *ngIf="budgets.length === 0" class="empty-state">No budgets have been created.</p>
+
+  <table *ngIf="budgets.length > 0">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Month</th>
+        <th>Limit</th>
+        <th>Actual Spend</th>
+        <th>Remaining</th>
+        <th>Progress</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let budget of budgets">
+        <td>{{ budget.category }}</td>
+        <td>{{ budget.month }}</td>
+        <td>{{ budget.limitAmount | number:'1.2-2' }}</td>
+        <td>{{ budget.actualSpend | number:'1.2-2' }}</td>
+        <td [ngClass]="{'over-budget': isOverBudget(budget), 'under-budget': !isOverBudget(budget)}">
+          {{ budget.remainingAmount | number:'1.2-2' }}
+        </td>
+        <td class="progress-cell">
+          <div class="progress-bar-container">
+            <div
+              class="progress-bar-fill"
+              [ngClass]="{'progress-bar-red': isOverBudget(budget), 'progress-bar-green': !isOverBudget(budget)}"
+              [style.width.%]="getProgressPercentage(budget)">
+            </div>
+          </div>
+        </td>
+        <td class="actions">
+          <button class="btn btn-secondary btn-sm" (click)="editBudget(budget)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteBudget(budget.id)">Delete</button>
+          <span *ngIf="getDeleteError(budget.id)" class="inline-error">{{ getDeleteError(budget.id) }}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

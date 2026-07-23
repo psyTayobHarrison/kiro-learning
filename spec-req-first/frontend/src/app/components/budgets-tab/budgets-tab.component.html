@@ -1,0 +1,13 @@
+<div class="error-message" *ngIf="error">{{ error }}</div>
+
+<app-budget-form
+  [editBudget]="editBudget"
+  (budgetCreated)="onBudgetCreated()"
+  (budgetUpdated)="onBudgetUpdated()">
+</app-budget-form>
+
+<app-budget-list
+  [budgets]="budgets"
+  (budgetDeleted)="onBudgetDeleted()"
+  (budgetEdit)="onBudgetEdit($event)">
+</app-budget-list>

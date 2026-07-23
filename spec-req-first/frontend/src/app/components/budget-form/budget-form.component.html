@@ -1,0 +1,57 @@
+<div class="card">
+  <h2>{{ isEditMode ? 'Edit Budget' : 'Add Budget' }}</h2>
+
+  <div class="error-message" *ngIf="apiError">
+    {{ apiError }}
+  </div>
+
+  <form [formGroup]="budgetForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="category">Category</label>
+      <input
+        id="category"
+        type="text"
+        formControlName="category"
+        placeholder="e.g. Groceries"
+        [class.invalid]="isFieldInvalid('category')"
+      />
+      <div class="error" *ngIf="isFieldInvalid('category')">
+        <span *ngIf="budgetForm.get('category')?.errors?.['required']">Category is required.</span>
+        <span *ngIf="budgetForm.get('category')?.errors?.['maxlength']">Category must not exceed 50 characters.</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="month">Month</label>
+      <input
+        id="month"
+        type="month"
+        formControlName="month"
+        [class.invalid]="isFieldInvalid('month')"
+      />
+      <div class="error" *ngIf="isFieldInvalid('month')">
+        <span *ngIf="budgetForm.get('month')?.errors?.['required']">Month is required.</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="limitAmount">Limit Amount</label>
+      <input
+        id="limitAmount"
+        type="number"
+        formControlName="limitAmount"
+        step="0.01"
+        placeholder="0.00"
+        [class.invalid]="isFieldInvalid('limitAmount')"
+      />
+      <div class="error" *ngIf="isFieldInvalid('limitAmount')">
+        <span *ngIf="budgetForm.get('limitAmount')?.errors?.['required']">Limit amount is required.</span>
+        <span *ngIf="budgetForm.get('limitAmount')?.errors?.['min']">Limit amount must be at least 0.01.</span>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="isSubmitting">
+      {{ isSubmitting ? (isEditMode ? 'Updating...' : 'Adding...') : (isEditMode ? 'Update Budget' : 'Add Budget') }}
+    </button>
+  </form>
+</div>
